@@ -21,7 +21,11 @@ def PLAY():
             os.system("cls")
             game.display()
             print("You win!")
-            break
+            char = input("Play again (Y/N) > ").upper()
+            if char == "Y":
+                PLAY()
+            else:
+                break
         if game.loser():
             os.system("cls")
             game.display()
@@ -30,7 +34,11 @@ def PLAY():
             print(
                 "You got {} out of {}".format(game.get_right_guesses(), len(game.word))
             )
-            break
+            char = input("Play again (Y/N) > ").upper()
+            if char == "Y":
+                PLAY()
+            else:
+                break
 
 
 if __name__ == "__main__":
