@@ -7,7 +7,7 @@ def get_random_word():
     with open("words.txt", "r", encoding="utf-8") as f:
         data = f.read()
         data = list(data.split("\n"))
-    return data[random.randint(0, 29)]
+    return data[random.randint(0, 249)]
 
 
 def PLAY():
@@ -30,15 +30,15 @@ def PLAY():
             os.system("cls")
             game.display()
             print("You Lose!")
-            print("The word was " + "\033[1m{}\033[0m".format(game.word))
+            print("The word was : " + "\033[1m{}\033[0m".format(game.word))
             print(
                 "You got {} out of {}".format(game.get_right_guesses(), len(game.word))
             )
-            char = input("Play again (Y/N) > ").upper()
+            char = input("Play again? (Y/N) > ").upper()
             if char == "Y":
                 PLAY()
             else:
-                break
+                quit()
 
 
 if __name__ == "__main__":

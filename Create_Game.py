@@ -20,9 +20,14 @@ class Game:
 
     def guess_spot(self, guess):
         self.total_guesses -= 1
+        success = False
+
         for idx, letter in enumerate(self.word):
             if guess == letter:
                 self.guessed_correct[idx] = guess
+                success = True
+        if success:
+            self.total_guesses += 1
 
     def winner(self):
         for spot in self.guessed_correct:
