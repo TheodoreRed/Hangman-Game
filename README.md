@@ -1,5 +1,5 @@
 # Hangman-Game
 - Simple Hangman game using Python and classes
 
-![Hangman](First.png)
-![Hangman](Second.png)
+![Hangman](screenshot_1.png)
+![Hangman](screenshot_2.png)
