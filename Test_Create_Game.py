@@ -1,6 +1,10 @@
 import pytest
 import Create_Game
 
+"""
+python -m pytest
+"""
+
 
 def test_constructor():
     game = Create_Game.Game("monkey")
